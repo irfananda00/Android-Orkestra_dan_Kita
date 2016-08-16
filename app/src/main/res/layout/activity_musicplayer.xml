@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MusicPlayerActivity"
+    >
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="vm"
+            type="orkestrakita.com.orkestradankita.MusicPlayerActivity"/>
+    </data>
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bg">
+
+    <LinearLayout
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="@{vm.onClickSound}"
+            android:layout_margin="4dp"
+            android:id="@+id/sound"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <ImageView
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="@{vm.onClickHome}"
+            android:layout_margin="4dp"
+            android:id="@+id/back"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/title_music"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/alatmusik"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_margin="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="@{vm.onClickPlayorPause}"
+            android:layout_margin="4dp"
+            android:id="@+id/play"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    </layout>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SeatingPlanActivity">
+
+    <data>
+        <!--Library-->
+        <import type="android.view.View" />
+        <!--Variable-->
+        <variable
+            name="vm"
+            type="orkestrakita.com.orkestradankita.SeatingPlanActivity" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_weight="1"
+            android:paddingTop="36dp"
+            android:paddingLeft="64dp"
+            android:paddingRight="64dp"
+            android:src="@drawable/title_seatpln"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:padding="16dp"
+                android:id="@+id/tempat_seatplan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:paddingLeft="36dp"
+                android:paddingTop="36dp"
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/sound"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="4dp"
+                    android:onClick="@{vm.onClickSound}" />
+
+                <ImageView
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="4dp"
+                    android:onClick="@{vm.onClickHome}" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linearLayout2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:background="@drawable/tuba"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/tuba"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:onClick="@{vm.onClickTuba}"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/trombon"
+                    android:layout_toEndOf="@+id/trombon">
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:background="@drawable/obo"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/obo"
+                    android:layout_width="56dp"
+                    android:layout_height="24dp"
+                    android:layout_alignTop="@+id/piccolo_flute"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@+id/piccolo_flute"
+                    android:layout_toRightOf="@+id/piccolo_flute"
+                    android:onClick="@{vm.onClickObo}">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@drawable/piccolo_flute"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/piccolo_flute"
+                    android:layout_width="56dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:onClick="@{vm.onClickpiccolo_flute}"
+                    android:layout_below="@+id/frameLayout2"
+                    android:layout_alignLeft="@+id/frameLayout2"
+                    android:layout_alignStart="@+id/frameLayout2"
+                    android:layout_marginLeft="57dp"
+                    android:layout_marginStart="57dp" />
+
+
+                <FrameLayout
+                    android:background="@drawable/french_horn"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/french_horn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:onClick="@{vm.onClickfrench_horn}"
+                    android:layout_alignTop="@+id/piccolo_flute"
+                    android:layout_toRightOf="@+id/piano"
+                    android:layout_toEndOf="@+id/piano">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@drawable/harpa"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/harpa"
+                    android:layout_width="36dp"
+                    android:layout_height="48dp"
+                    android:layout_alignTop="@+id/piano"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_toLeftOf="@+id/biola12"
+                    android:layout_toStartOf="@+id/biola12"
+                    android:onClick="@{vm.onClickharpa}">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@drawable/celesto"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/celesto"
+                    android:layout_width="36dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:onClick="@{vm.onClickcelesto}"
+                    android:layout_alignTop="@+id/french_horn"
+                    android:layout_alignLeft="@+id/piano"
+                    android:layout_alignStart="@+id/piano">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@drawable/trombon"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/trombon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:onClick="@{vm.onClicktrombon}"
+                    android:layout_above="@+id/tuba"
+                    android:layout_toRightOf="@+id/frameLayout2"
+                    android:layout_toEndOf="@+id/frameLayout2" />
+
+                <FrameLayout
+                    android:background="@drawable/piano"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/piano"
+                    android:layout_width="36dp"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/trompet"
+                    android:layout_gravity="bottom"
+                    android:layout_toLeftOf="@+id/harpa"
+                    android:layout_toStartOf="@+id/harpa"
+                    android:onClick="@{vm.onClickpiano}">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@drawable/biola12"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/biola12"
+                    android:layout_width="72dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/piccolo_flute"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_toLeftOf="@+id/biola_alto"
+                    android:layout_toStartOf="@+id/biola_alto"
+                    android:onClick="@{vm.onClickbiola12}">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@drawable/trompet"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/trompet"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:onClick="@{vm.onClicktrompet}"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/frameLayout2"
+                    android:layout_toEndOf="@+id/frameLayout2">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@drawable/biola_alto"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/biola_alto"
+                    android:layout_width="64dp"
+                    android:layout_height="56dp"
+                    android:layout_below="@+id/obo"
+                    android:layout_gravity="center"
+                    android:layout_toLeftOf="@+id/trompet"
+                    android:layout_toStartOf="@+id/trompet"
+                    android:onClick="@{vm.onClickbiola_alto}">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@drawable/contra_bass"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/contra_bass"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:onClick="@{vm.onClickcontra_bass}"
+                    android:layout_alignBottom="@+id/harpa"
+                    android:layout_toRightOf="@+id/obo"
+                    android:layout_toEndOf="@+id/obo">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:paddingTop="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="72dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:onClick="@{vm.onClickselo}"
+                    android:layout_alignBottom="@+id/biola12"
+                    android:layout_toRightOf="@+id/biola12">
+
+                    <FrameLayout
+                        android:id="@+id/selo"
+                        android:background="@drawable/selo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/frameLayout2"
+                    android:layout_width="172dp"
+                    android:layout_height="64dp"
+                    android:layout_alignBottom="@+id/trombon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="left|top">
+
+                    <FrameLayout
+                        android:background="@drawable/perkusi"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:id="@+id/perkusi"
+                        android:layout_width="172dp"
+                        android:layout_height="64dp"
+                        android:onClick="@{vm.onClickPerkusi}"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" >
+
+                        <FrameLayout
+                            android:background="@drawable/klarinet"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:id="@+id/klarinet"
+                            android:layout_width="64dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:onClick="@{vm.onClickKlarinet}" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:background="@drawable/bassoon"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:id="@+id/bassoon"
+                        android:layout_width="64dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right|bottom"
+                        android:onClick="@{vm.onClickbassoon}" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:paddingBottom="36dp"
+                android:paddingLeft="36dp"
+                android:paddingRight="36dp"
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/play"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="4dp"
+                    android:onClick="@{vm.onClickPlayorPause}" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:src="@drawable/orang_seatpln"
+            android:layout_width="180dp"
+            android:layout_height="140dp" />
+
+    </LinearLayout>
+
+</layout>
